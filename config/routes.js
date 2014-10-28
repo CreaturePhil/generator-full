@@ -1,5 +1,6 @@
 var routes = [
-  { path: '/', name: 'index', controller: 'home' }
+  { path: '/', controller: 'home', name: 'index' },
+  { path: '/about', controller: 'home', name: 'about' }
 ];
 
 module.exports = routes;

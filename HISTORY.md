@@ -1,3 +1,8 @@
+# 0.5.0
+
+- Add static cache
+- Add configuration secrets
+
 # 0.4.0 / 2014-10-28
 
 - Update docs on routing_ops

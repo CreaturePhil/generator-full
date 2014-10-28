@@ -4,6 +4,7 @@ var morgan = require('morgan');
 var path = require('path');
 
 var router = require('./router');
+var secrets = require('./config/secrets');
 
 var app = express();
 

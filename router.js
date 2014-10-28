@@ -19,9 +19,9 @@ function routing_ops(app) {
     var name = route.controller;
     var controller = controllers[name];
     var controller_property = controller[route.name];
-    var controller_component = controller_property();
 
-    if (controller && controller_property && controller_component) {
+    if (controller && controller_property) {
+      var controller_component = controller_property();
 
       if (route.login_required) {
         controller_component.get && app.get(route.path, login_required, controller_component.get);
