@@ -1,3 +1,8 @@
+# 0.3.0 / 2014-10-27
+
+- Add routing operations
+- Add routes and controllers functionality
+
 # 0.2.0 / 2014-10-27
 
 - Set up application
