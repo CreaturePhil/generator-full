@@ -7,7 +7,7 @@ var homeController = (function() {
     _self = {};
 
     _self.get = function(req, res, next) {
-      res.send('Hello World');
+      res.render('index');
     };
     
     return _self;
