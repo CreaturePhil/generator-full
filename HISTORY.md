@@ -2,6 +2,7 @@
 
 - Update docs on routing_ops
 - Add jade view engine
+- Add error handling
 
 # 0.3.0 / 2014-10-27
 
