@@ -1,6 +1,6 @@
 {
   "name": "generator-full",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Express' opinionated boilerplate for Node.js web applications.",
   "author": "Philip La <birkal@outlook.com>",
   "scripts": {
@@ -14,7 +14,8 @@
     "url": "https://github.com/creaturephil/generator-full/issues"
   },
   "dependencies": {
-    "express": "~4.10.0"
+    "express": "~4.10.0",
+    "morgan": "~1.4.1"
   },
   "devDependencies": {
     "grunt": "~0.4.5"
