@@ -17,6 +17,9 @@ app.set('view engine', 'jade');
 
 app.use(morgan('dev'));
 
+// static cache for one week
+app.use(express.static(path.join(__dirname, 'public'), { maxAge: 604800000 }));
+
 // routes setup
 router(app);
 
