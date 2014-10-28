@@ -9,6 +9,10 @@ var controllers = {
   'home': homeController
 };
 
+/**
+ * routing_ops: Routing operations mapping routes to application.
+ * @app: {object} Express' application
+ */
 function routing_ops(app) {
   for (var path = 0, len = routes.length; path < len; path++) {
     var route = routes[path];
