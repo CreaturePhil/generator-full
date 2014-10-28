@@ -1,0 +1,26 @@
+{
+  "name": "generator-full",
+  "version": "0.1.0",
+  "description": "Express' opinionated boilerplate for Node.js web applications.",
+  "author": "Philip La <birkal@outlook.com>",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/creaturephil/generator-full"
+  },
+  "bugs": {
+    "url": "https://github.com/creaturephil/generator-full/issues"
+  },
+  "dependencies": {
+    "express": "~4.10.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "license": "MIT"
+}
