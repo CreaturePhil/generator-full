@@ -1,0 +1,26 @@
+{
+  "name": "generator-full",
+  "main": "index.js",
+  "version": "0.4.0",
+  "authors": [
+    "Phil <birkal@outlook.com>"
+  ],
+  "description": "Express' opinionated boilerplate for Node.js web applications.",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.0",
+    "font-awesome": "~4.2.0"
+  }
+}

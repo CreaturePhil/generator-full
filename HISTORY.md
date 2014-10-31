@@ -4,6 +4,7 @@
 - Add configuration secrets
 - Unminify html in development
 - MongoDB Setup
+- Add bower
 
 # 0.4.0 / 2014-10-28
 
