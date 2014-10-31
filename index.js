@@ -1,5 +1,6 @@
 var express = require('express');
 var morgan = require('morgan');
+var mongoose = require('mongoose');
 
 var path = require('path');
 
@@ -7,6 +8,15 @@ var router = require('./router');
 var secrets = require('./config/secrets');
 
 var app = express();
+    
+/**
+ * Connect to MongoDB.
+ */
+
+mongoose.connect(secrets.db);
+mongoose.connection.on('error', function() {
+  console.error('MongoDB Connection Error. Make sure MongoDB is running.');
+});
 
 /**
  * App configuration.

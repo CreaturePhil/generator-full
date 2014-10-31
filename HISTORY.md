@@ -3,6 +3,7 @@
 - Add static cache
 - Add configuration secrets
 - Unminify html in development
+- MongoDB Setup
 
 # 0.4.0 / 2014-10-28
 
