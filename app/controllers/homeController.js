@@ -4,13 +4,13 @@ var homeController = (function() {
   controller.index = index;
 
   function index() {
-    _self = {};
+    var index = {};
 
-    _self.get = function(req, res, next) {
+    index.get = function(req, res, next) {
       res.render('index');
     };
     
-    return _self;
+    return index;
   }
 
   return controller;

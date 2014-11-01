@@ -5,6 +5,7 @@
 - Unminify html in development
 - MongoDB Setup
 - Add bower
+- Restructure controller
 
 # 0.4.0 / 2014-10-28
 
