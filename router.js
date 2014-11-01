@@ -3,10 +3,14 @@ var express = require('express');
 var routes = require('./config/routes');
 var homeController = require('./app/controllers/homeController');
 
-var login_required = 'PUT PASSPORT CONFIGURATION HERE!';
+var login_required = require('./config/passport').isAuthenticated;
 
 var controllers = {
   'home': homeController
+};
+
+var pre = {
+  'login_required': login_required
 };
 
 /**
@@ -23,11 +27,11 @@ function routing_ops(app) {
     if (controller && controller_property) {
       var controller_component = controller_property();
 
-      if (route.login_required) {
-        controller_component.get && app.get(route.path, login_required, controller_component.get);
-        controller_component.post && app.post(route.path, login_required, controller_component.post);
-        controller_component.put && app.put(route.path, login_required, controller_component.put);
-        controller_component.delete && app.delete(route.path, login_required, controller_component.delete);
+      if (route.pre) {
+        controller_component.get && app.get(route.path, pre[route.pre], controller_component.get);
+        controller_component.post && app.post(route.path, pre[route.pre], controller_component.post);
+        controller_component.put && app.put(route.path, pre[route.pre], controller_component.put);
+        controller_component.delete && app.delete(route.path, pre[route.pre], controller_component.delete);
       } else {
         controller_component.get && app.get(route.path, controller_component.get);
         controller_component.post && app.post(route.path, controller_component.post);

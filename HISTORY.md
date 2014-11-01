@@ -2,6 +2,7 @@
 
 - Add more dependencies for authentication
 - Add User model
+- Change routing of login_required to 'pre' middleware
 
 # 0.5.0 / 2014-10-31
 
