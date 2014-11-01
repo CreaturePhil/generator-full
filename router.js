@@ -28,10 +28,38 @@ function routing_ops(app) {
       var controller_component = controller_property();
 
       if (route.pre) {
-        controller_component.get && app.get(route.path, pre[route.pre], controller_component.get);
-        controller_component.post && app.post(route.path, pre[route.pre], controller_component.post);
-        controller_component.put && app.put(route.path, pre[route.pre], controller_component.put);
-        controller_component.delete && app.delete(route.path, pre[route.pre], controller_component.delete);
+
+        if (typeof route.pre === typeof 'String') {
+          controller_component.get && app.get(route.path, pre[route.pre], controller_component.get);
+          controller_component.post && app.post(route.path, pre[route.pre], controller_component.post);
+          controller_component.put && app.put(route.path, pre[route.pre], controller_component.put);
+          controller_component.delete && app.delete(route.path, pre[route.pre], controller_component.delete);
+        } else if (typeof route.pre === typeof ['Array']) {
+
+          if (route.pre.indexOf('get') >= 0) {
+            controller_component.get && app.get(route.path, pre[route.pre], controller_component.get);
+          } else {
+            controller_component.get && app.get(route.path, controller_component.get);
+          }
+
+          if (route.pre.indexof('post') >= 0) {
+            controller_component.post && app.post(route.path, pre[route.pre], controller_component.post);
+          } else {
+            controller_component.post && app.post(route.path, controller_component.post);
+          }
+
+          if (route.pre.indexof('put') >= 0) {
+            controller_component.put && app.put(route.path, pre[route.pre], controller_component.put);
+          } else {
+            controller_component.put && app.put(route.path, controller_component.put);
+          }
+
+          if (route.pre.indexof('put') >= 0) {
+            controller_component.delete && app.delete(route.path, pre[route.pre], controller_component.delete);
+          } else {
+            controller_component.delete && app.delete(route.path, controller_component.delete);
+          }
+        }
       } else {
         controller_component.get && app.get(route.path, controller_component.get);
         controller_component.post && app.post(route.path, controller_component.post);
