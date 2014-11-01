@@ -1,8 +1,10 @@
-# 0.6.0
+# 0.6.0 / 2014-11-1
 
 - Add more dependencies for authentication
 - Add User model
 - Change routing of login_required to 'pre' middleware
+- Add authentication controller
+- Add views
 
 # 0.5.0 / 2014-10-31
 
