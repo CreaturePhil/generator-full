@@ -1,4 +1,4 @@
-# 0.5.0
+# 0.5.0 / 2014-10-31
 
 - Add static cache
 - Add configuration secrets
