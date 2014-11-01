@@ -27,12 +27,12 @@ function routing_ops(app) {
         controller_component.get && app.get(route.path, login_required, controller_component.get);
         controller_component.post && app.post(route.path, login_required, controller_component.post);
         controller_component.put && app.put(route.path, login_required, controller_component.put);
-        controller_component.delete && app.delete(route.path, login_required, controller_component.get);
+        controller_component.delete && app.delete(route.path, login_required, controller_component.delete);
       } else {
         controller_component.get && app.get(route.path, controller_component.get);
         controller_component.post && app.post(route.path, controller_component.post);
         controller_component.put && app.put(route.path, controller_component.put);
-        controller_component.delete && app.delete(route.path, controller_component.get);
+        controller_component.delete && app.delete(route.path, controller_component.delete);
       }
     }
   }
