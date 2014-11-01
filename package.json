@@ -14,6 +14,7 @@
     "url": "https://github.com/creaturephil/generator-full/issues"
   },
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.9.2",
     "compression": "^1.2.0",
     "connect-mongo": "^0.4.1",
