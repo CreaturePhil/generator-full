@@ -1,3 +1,7 @@
+# 0.6.0
+
+- Add more dependencies for authentication
+
 # 0.5.0 / 2014-10-31
 
 - Add static cache
